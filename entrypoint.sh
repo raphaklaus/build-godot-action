@@ -10,32 +10,32 @@ unzip Godot_v3.2-stable_export_templates.tpz
 mv templates/* ~/.local/share/godot/templates/3.2.stable
 rm -f Godot_v3.2-stable_export_templates.tpz
 
-if [ "$3" != "" ]
-then
-    SubDirectoryLocation="$3/"
-fi
+# if [ "$3" != "" ]
+# then
+#     SubDirectoryLocation="$3/"
+# fi
 
 # Export for project
-echo "Building $1 for $2"
-echo $SubDirectoryLocation
-mkdir -p ~/build/${SubDirectoryLocation:-""}
+# echo "Building $1 for $2"
+# echo $SubDirectoryLocation
+# mkdir -p ~/build/${SubDirectoryLocation:-""}
 #cd ${5-"~"}
-echo $(pwd)
-echo $(ls)
-godot --export-debug $2 ~/build/${SubDirectoryLocation:-""}$1
-cd ~
-echo $(pwd)
-echo $(ls)
-cd build
-echo $(pwd)
-echo $(ls)
+# echo $(pwd)
+# echo $(ls)
 
-echo ::set-output name=build::~/build/${SubDirectoryLocation:-""}
+# cd ~
+# echo $(pwd)
+# echo $(ls)
+# cd build
+# echo $(pwd)
+# echo $(ls)
 
-if [ "$4" = "true" ]
-then
-    mkdir ~/package
-    cd ~/build
-    zip ~/package/artifact.zip ${SubDirectoryLocation:-"."} -r
-    echo ::set-output name=artifact::~/package/artifact.zip
-fi
+# echo ::set-output name=build::~/build/${SubDirectoryLocation:-""}
+
+# if [ "$4" = "true" ]
+# then
+#     mkdir ~/package
+#     cd ~/build
+#     zip ~/package/artifact.zip ${SubDirectoryLocation:-"."} -r
+#     echo ::set-output name=artifact::~/package/artifact.zip
+# fi
