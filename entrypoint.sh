@@ -17,8 +17,13 @@ fi
 
 # Export for project
 echo "Building $1 for $2"
+echo $SubDirectoryLocation
 mkdir -p ~/build/${SubDirectoryLocation:-""}
+echo $(pwd)
+echo $(ls)
 cd ${5-"~"}
+echo $(pwd)
+echo $(ls)
 godot --export-debug $2 ~/build/${SubDirectoryLocation:-""}$1
 cd ~
 
