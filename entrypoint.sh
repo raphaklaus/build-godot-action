@@ -32,7 +32,7 @@ godot --export-debug linux ~/build
 # echo $(pwd)
 # echo $(ls)
 
-# echo ::set-output name=build::~/build/${SubDirectoryLocation:-""}
+echo ::set-output name=build::~/build
 
 # if [ "$4" = "true" ]
 # then
