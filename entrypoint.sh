@@ -11,7 +11,7 @@ mv templates/* ~/.local/share/godot/templates/3.2.stable
 rm -f Godot_v3.2-stable_export_templates.tpz
 
 mkdir -p ~/build/
-godot --export-debug linux ~/build
+godot --export-debug linux ~/build/rexgame.x86_64
 echo $(ls)
 
 cd build
