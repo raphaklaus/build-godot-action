@@ -21,7 +21,7 @@ echo $SubDirectoryLocation
 mkdir -p ~/build/${SubDirectoryLocation:-""}
 echo $(pwd)
 echo $(ls)
-cd ${5-"~"}
+#cd ${5-"~"}
 echo $(pwd)
 echo $(ls)
 godot --export-debug $2 ~/build/${SubDirectoryLocation:-""}$1
