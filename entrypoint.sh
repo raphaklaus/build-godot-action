@@ -14,7 +14,7 @@ mkdir -p ~/build/
 godot --export-debug linux ~/build/rexgame.x86_64
 echo $(ls)
 
-cd build
+cd ~/build
 echo $(ls)
 
 # if [ "$3" != "" ]
