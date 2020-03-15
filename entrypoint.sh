@@ -20,6 +20,8 @@ echo "Building $1 for $2"
 echo $SubDirectoryLocation
 mkdir -p ~/build/${SubDirectoryLocation:-""}
 #cd ${5-"~"}
+echo $(pwd)
+echo $(ls)
 godot --export-debug $2 ~/build/${SubDirectoryLocation:-""}$1
 cd ~
 echo $(pwd)
